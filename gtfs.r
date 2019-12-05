@@ -3,10 +3,10 @@
 #   ETL-GTFS2PSQL version 1.0.0 Novembre 2019                                                                   #
 #   Ce programme est un script ETL écrit en R par Kelogue Thérasmé, Réseau de transport de Longueuil.           #
 #   Le script va lire le dossier de fichiers GTFS (chemin) et extraire les fichiers trips, stops et stop_times. #
-#   Les fichiers cibles doivent être au format csv. Chaque fichier est lu et les donnÃ©es sont poussées          # 
+#   Les fichiers cibles doivent être au format csv. Chaque fichier est lu et les donnÃ©es sont poussées         # 
 #   vers trois tables distinctes dans la Base de données PostGreSQL>>>Achaldep (stops_chrono, trips_chrono      #
 #   et stop_times_chrono). Plusieurs champs ou clés sont ajoutés par manipulation et jointure de DF en vue de   #
-#   pour lier les tables GTFS avec les données de Chrono (voir table passages_chronos et l'ETL-CHRONO2PSQL)     #                                                       #
+#   lier les tables GTFS avec les données de Chrono (voir table passages_chronos et l'ETL-CHRONO2PSQL)          #                                                       #
 #################################################################################################################
 
 rm(list=ls())
@@ -217,12 +217,12 @@ rm(list=ls())
 
 #################################################################################################################
 #   ETL-CHRONO2PSQL version 1.0.0 Novembre 2019                                                                 #
-#   Ce programme est un script ETL écrit en R par Kelogue Thérasmé, RÃ©seau de transport de Longueuil.           #
+#   Ce programme est un script ETL écrit en R par Kelogue Thérasmé, RÃ©seau de transport de Longueuil.          #
 #   Le script va lire le dossier de fichiers cHRONO (chemin). Les fichiers cibles doivent être au format csv.   #
 #   Chaque fichier est lu et les données sont poussées vers la table passages_chronos dans la Base de données   #   
-#   PostGreSQL>>>Achaldep. Plusieurs colonnes de données y sont ajoutées par transformation et jointure avec   #
-#   les tables GTFS (voir table trips_chrono, stops_chrono et stop_times_chronos de la mÃªme BDD et aussi le     #
-#   script ETL associé ETL-GTFS2PSQL.                                                                            #
+#   PostGreSQL>>>Achaldep. Plusieurs colonnes de données y sont ajoutées par transformation et jointure avec    #
+#   les tables GTFS (voir table trips_chrono, stops_chrono et stop_times_chronos de la mÃªme BDD et aussi le    #
+#   script ETL associé ETL-GTFS2PSQL.                                                                           #
 #################################################################################################################
 
 if (!require(needs)) install.packages("needs")
